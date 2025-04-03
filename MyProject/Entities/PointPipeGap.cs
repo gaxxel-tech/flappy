@@ -9,22 +9,16 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using Microsoft.Xna.Framework;
-using FlatRedBall.Gui;
 
 namespace MyProject.Entities
 {
-    public partial class PipeSpawner
+    public partial class PointPipeGap
     {
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not
         /// added to managers will not have this method called.
         /// </summary>
-        /// 
-
-        private int spawn = 0;
-        private float pipeSpawnTimer = 0;
-        private float heightRange = 100;
         private void CustomInitialize()
         {
             
@@ -32,11 +26,7 @@ namespace MyProject.Entities
 
         private void CustomActivity()
         {
-            if(spawn == 1)
-            {
-                return;
-            }
-            SpawnPipe();
+            
         }
 
         private void CustomDestroy()
@@ -47,17 +37,6 @@ namespace MyProject.Entities
         private static void CustomLoadStaticContent(string contentManagerName)
         {
             
-        }
-
-
-        private void SpawnPipe()
-        {
-            
-            float randomHeight = FlatRedBallServices.Random.Between(-heightRange, heightRange);
-            Pipe newPipe = Factories.PipeFactory.CreateNew(x: -137, y: 155);
-
-            spawn = 1;
-
         }
     }
 }

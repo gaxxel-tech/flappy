@@ -30,6 +30,7 @@ namespace MyProject.Entities
         private float maxRotationLimit = 75f;
         private float rotationForce = 5f;
         private float jumpStrenght = 250f;
+        private bool playing = true;
 
         private void CustomInitialize()
         {
@@ -38,6 +39,10 @@ namespace MyProject.Entities
 
         private void CustomActivity()
         {
+            if (!playing)
+            {
+                return;
+            }
             MovementActivity();
         }
 
@@ -94,6 +99,14 @@ namespace MyProject.Entities
             }
         }
 
-       
+       public void StopPlayerMovement()
+        {
+            /*
+            this.Velocity.Y = 0;
+            this.rotationForce = 0;
+            this.Acceleration.Y = 0;
+            this.playing = false;
+            */
+        }
     }
 }

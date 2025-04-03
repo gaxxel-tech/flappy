@@ -19,14 +19,26 @@ namespace MyProject.Entities
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not
         /// added to managers will not have this method called.
         /// </summary>
+        /// 
+
+        private bool canMove = true;
+        private float pipeSpeed = 40f;
+
+        public float setSpeed
+        {
+            get { return pipeSpeed; }
+            set { pipeSpeed = value; }
+        }
+
+
         private void CustomInitialize()
         {
-            
+            setSpeed = 40f;
         }
 
         private void CustomActivity()
         {
-            FlatRedBall.Debugging.Debugger.Write("Jabon");
+           
             PipeMovementActivity();
         }
 
@@ -42,7 +54,18 @@ namespace MyProject.Entities
 
         private void PipeMovementActivity()
         {
-            this.X += 1f;
+            if(!canMove)
+            {
+                this.Velocity.X = 0;
+                return;
+            }
+            this.Velocity.X = -pipeSpeed;
+
+        }
+
+        public void StopPipeMovement()
+        {
+            canMove = false;
         }
     }
 }

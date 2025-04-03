@@ -88,7 +88,7 @@
         {
           "Type": "float",
           "Member": "Y",
-          "Value": -64.0,
+          "Value": -128.0,
           "Time": 0.0
         }
       ],
@@ -132,6 +132,12 @@
           "Member": "TextureScale",
           "Value": 1.0,
           "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": -64.0,
+          "Time": 0.0
         }
       ],
       "SourceType": 2,
@@ -152,20 +158,14 @@
       "InstructionSaves": [
         {
           "Type": "float",
-          "Member": "TextureScale",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "Texture2D",
-          "Member": "Texture",
-          "Value": "PipeStyle",
+          "Member": "BottomTexturePixel",
+          "Value": 48.0,
           "Time": 0.0
         },
         {
           "Type": "float",
-          "Member": "TopTexturePixel",
-          "Value": 32.0,
+          "Member": "Height",
+          "Value": 128.0,
           "Time": 0.0
         },
         {
@@ -175,15 +175,9 @@
           "Time": 0.0
         },
         {
-          "Type": "float",
-          "Member": "BottomTexturePixel",
-          "Value": 48.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Y",
-          "Value": -80.0,
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "PipeStyle",
           "Time": 0.0
         },
         {
@@ -194,13 +188,214 @@
         },
         {
           "Type": "float",
-          "Member": "Height",
-          "Value": 128.0,
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TopTexturePixel",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": -144.0,
           "Time": 0.0
         }
       ],
       "SourceType": 2,
       "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PipeTopSide",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "BottomTexturePixel",
+          "Value": 80.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "RightTexturePixel",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "PipeStyle",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TopTexturePixel",
+          "Value": 48.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 64.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PipeBodyTopSide",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "BottomTexturePixel",
+          "Value": 48.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 128.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "RightTexturePixel",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Texture2D",
+          "Member": "Texture",
+          "Value": "PipeStyle",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "TopTexturePixel",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 144.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PipeTotSideCollision",
+      "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 160.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 128.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "AxisAlignedRectangle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "PointPipeGapInstance",
+      "SourceClassType": "Entities\\PointPipeGap",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "PointCollisionHeight",
+          "Value": 92.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "PointCollisionWidth",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 24.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 1,
+      "SourceFile": "Entities/PointPipeGap",
       "AttachToContainer": true,
       "GenerateTimedEmit": true
     }
